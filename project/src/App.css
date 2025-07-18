@@ -1,0 +1,178 @@
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  position: relative;
+  color: #ffffff;
+}
+
+.app-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.app-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stats-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1) !important;
+}
+
+.todo-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  color: #ffffff;
+}
+
+.todo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1) !important;
+}
+
+.todo-card.completed {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: #ffffff;
+}
+
+.todo-card:not(.completed) {
+  border-left-color: #ffffff;
+}
+
+.priority-badge {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.add-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.add-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline-primary,
+.btn-outline-success,
+.btn-outline-danger {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-danger:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+.form-control,
+.form-select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.card-text {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.input-group-text {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.alert {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .stats-card {
+    margin-bottom: 1rem;
+  }
+  
+  .todo-card {
+    margin-bottom: 1rem;
+  }
+}
